@@ -1,0 +1,26 @@
+﻿<Window x:Class="LeagueInfo.MainWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:view="clr-namespace:LeagueInfo.View"
+				mc:Ignorable="d"
+				ResizeMode="CanResize"
+				Title="LeagueInfo" Height="600" Width="800"
+				WindowStartupLocation="CenterScreen">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1.2*"/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition Height="5*"/>
+		</Grid.RowDefinitions>
+		<TextBox Grid.ColumnSpan="2"></TextBox>
+		<Button FontSize="20" Grid.Column="2" Content="Search" Command="{Binding SearchCommand}" />
+		<view:OptionsView Grid.Row="1"/>
+		<view:SummonerHistoryView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+	</Grid>
+</Window>

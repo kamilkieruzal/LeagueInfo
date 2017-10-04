@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="LeagueInfo.View.SummonerDetailsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="Auto" Width="Auto">
+	<UserControl.Resources>
+	</UserControl.Resources>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<TextBlock Text="{Binding SummonerName}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"></TextBlock>
+		<Image Source="{Binding SummonerIconUrl}" Grid.Column="2" Grid.ColumnSpan="2"></Image>
+	</Grid>
+</UserControl>
